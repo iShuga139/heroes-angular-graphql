@@ -1,2 +1,2 @@
 # heroes-angular-graphql
-A simple ABC heore and a master-detail between heroes and sidekick
+A simple ABC heore with sidekick reference
