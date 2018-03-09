@@ -1,0 +1,66 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>{{ title }}</h1>
+  <button type="button" (click)="openModal(template)">
+     Create New User
+  </button>
+
+  <table align="center" >
+    <thead>
+      <tr>
+        <th class="text-center">NAME</th>
+        <th class="text-center">POWER</th>
+        <th class="text-center">STATUS</th>
+        <th class="text-center">SIDEKICK</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let heroes of heroes; let i = index">
+        <td>{{ heroes.name }}</td>
+        <td>{{ heroes.power }}</td>
+        <td>{{ heroes.status }}</td>
+        <td>{{ heroes.sidekick["name"] }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Modal Template of New Hero Form -->
+  <ng-template #template>
+    <div class="modal-header" align="center">
+      <h4 class="modal-title pull-left">Hero</h4>
+    </div>
+    <div class="modal-body">
+      <form>
+        <div class="form-group" align="center">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" name="name" placeholder="Name" [(ngModel)]="hero.name">
+        </div>
+        <div class="form-group" align="center">
+          <label for="name">Power</label>
+          <input type="text" class="form-control" name="power" placeholder="Power" [(ngModel)]="hero.power">
+        </div>
+        <div class="form-group" align="center">
+          <label for="name">Status</label>
+          <input type="text" class="form-control" name="status" placeholder="Status" [(ngModel)]="hero.status">
+        </div>
+        <form>
+          <div class="modal-header" align="center">
+              <h4 class="modal-title pull-left">Sidekick</h4>
+            </div>
+          <div class="form-group" align="center">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" name="name" placeholder="Name" [(ngModel)]="sidekick.name">
+          </div>
+          <div class="form-group" align="center">
+              <label for="name">Status</label>
+              <input type="text" class="form-control" name="status" placeholder="Status" [(ngModel)]="sidekick.status">
+            </div>
+        </form>
+        <div class="form-group" align="center">
+          <button type="button" class="btn btn-default" *ngIf="!hero._id" (click)="createHero(hero, sidekick);">Create</button>
+          <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">Back</button>
+        </div>
+      </form>
+    </div>
+  </ng-template>
+</div>
