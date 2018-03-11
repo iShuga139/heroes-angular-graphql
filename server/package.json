@@ -1,6 +1,6 @@
 {
   "name": "heroes-graphql",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "GraphQL server with mongo to represent a simple application with CRUD actions",
   "main": "bin/index.js",
   "scripts": {
