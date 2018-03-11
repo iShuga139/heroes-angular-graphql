@@ -1,14 +1,18 @@
-# Client
+# Client HEROES-ANGULAR-GRAPPHQL
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.0.
 
+This project has the purpose to consume a GraphQL server to show the Heroes information saved in MongoDB
+
 ## Development server
 
+* Install dependencies:
+
+  ```bash
+  $ npm install
+  ```
+
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Build
 
